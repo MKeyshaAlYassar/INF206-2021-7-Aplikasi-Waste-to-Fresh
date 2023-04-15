@@ -1,0 +1,48 @@
+.menu-fitur-user-container {
+  background-color: #ffffff;
+  position: absolute;
+  top: 190px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fitur-user-container {
+  margin-top: 40px;
+}
+
+.fitur-user-container p {
+  font-size: 12px;
+  width: 78px;
+  text-align: center;
+}
+
+.fitur-user-container div {
+  width: 78px;
+  height: 78px;
+  background: #60BA62;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-tukar-sampah {
+  height: 55px;
+}
+
+.icon-tukar-poin {
+  height: 50px;
+}
+
+.icon-cek-konversi-sampah {
+  height: 41px;
+}

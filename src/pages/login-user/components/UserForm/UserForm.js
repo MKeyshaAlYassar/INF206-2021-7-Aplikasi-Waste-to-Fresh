@@ -28,9 +28,11 @@ export default function UserForm() {
         <form>
           <input class="nama-input" placeholder="Nama Pengguna" />
           <input class="pass-input" placeholder="Kata Sandi" />
-          <button class="masuk-button">Masuk</button>
+          <Link to="/beranda-user">
+            <button class="masuk-button">Masuk</button>
+          </Link>
           <p class="buat-akun-link">
-            Belum punya akun? <span class="link-text">Buat Akun</span>
+            Belum punya akun? <Link to="/buat-akun-user">Buat Akun</Link>
           </p>
           <p class="ubah-pass-link">
             Lupa kata sandi? <span class="link-text">Ubah kata sandi</span>
@@ -38,7 +40,7 @@ export default function UserForm() {
         </form>
       </div>
       <div class="login-petugas-link">
-        <Link to="/petugas">Masuk sebagai petugas</Link>
+        <Link to="/login-petugas">Masuk sebagai petugas</Link>
       </div>
     </>
   );

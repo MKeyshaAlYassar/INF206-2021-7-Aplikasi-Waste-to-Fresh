@@ -33,7 +33,8 @@ export default function LoginPetugas() {
           <input class="pass-input" placeholder="Kata Sandi" />
           <button class="masuk-button">Masuk</button>
           <p class="buat-akun-link">
-            Belum punya akun? <span class="link-text">Buat Akun Petugas</span>
+            Belum punya akun?{" "}
+            <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
           </p>
           <p class="ubah-pass-link">
             Lupa kata sandi? <span class="link-text">Ubah kata sandi</span>
