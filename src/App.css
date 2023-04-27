@@ -1,7 +1,5 @@
-p {
+p, h1, div, button, input {
   font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-  font-family: 'Roboto', sans-serif;
-}
+

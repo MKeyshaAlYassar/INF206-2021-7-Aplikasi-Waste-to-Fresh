@@ -1,13 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import { UserAuth } from "../../context/AuthContext";
 
 export default function LoginPetugas() {
-  const [formData, setFormData] = React.useState({
-    firstName: "",
-    lastName: "",
+  const [formData, setFormData] = useState({
     email: "",
+    password: "",
   });
+
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+  const { login } = UserAuth();
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -18,30 +23,58 @@ export default function LoginPetugas() {
     });
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      await login(formData.email, formData.password);
+      navigate("/beranda-petugas");
+    } catch {
+      setError(e.message);
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <Header />
-      <div class="content-div">
-        <div class="title-div">
-          <h1 class="title-text">Masuk Sebagai Petugas</h1>
-          <p class="subtitle-text">
+      <div className="content-div">
+        <div className="title-div">
+          <h1 className="title-text">Masuk Sebagai Petugas</h1>
+          <p className="subtitle-text">
             Silahkan masuk menggunakan akun Petugas Waste to Fresh Anda
           </p>
         </div>
-        <form>
-          <input class="nama-input" placeholder="Nama Pengguna" />
-          <input class="pass-input" placeholder="Kata Sandi" />
-          <button class="masuk-button">Masuk</button>
-          <p class="buat-akun-link">
+        <form onSubmit={handleSubmit}>
+          <input
+            className="email-input"
+            type="email"
+            placeholder="Alamat Email"
+            onChange={handleChange}
+            name="email"
+            value={formData.email}
+          />
+          <input
+            className="pass-input"
+            type="password"
+            placeholder="Kata Sandi"
+            onChange={handleChange}
+            name="password"
+            value={formData.password}
+          />
+
+          <button className="masuk-button">Masuk</button>
+          <p className="buat-akun-link">
             Belum punya akun?{" "}
             <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
           </p>
-          <p class="ubah-pass-link">
-            Lupa kata sandi? <span class="link-text">Ubah kata sandi</span>
+          <p className="ubah-pass-link">
+            Lupa kata sandi? <span className="link-text">Ubah kata sandi</span>
           </p>
         </form>
       </div>
-      <div class="login-petugas-link">
+      <div className="login-petugas-link">
         <Link to="/">Masuk sebagai user</Link>
       </div>
     </>

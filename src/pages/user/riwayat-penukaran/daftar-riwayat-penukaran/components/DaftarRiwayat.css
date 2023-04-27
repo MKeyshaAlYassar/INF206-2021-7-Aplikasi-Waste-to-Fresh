@@ -1,0 +1,88 @@
+.display-riwayat-container {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+
+  width: 300px;
+  height: 75px;
+
+  border-radius: 25px;
+
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.waktu-display-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+.jam-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-display-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.tanggal-display-riwayat {
+  margin: 0px;
+  margin-left: 18px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.jam-display-riwayat {
+  margin: 0px;
+  margin-right: 18px;
+  margin-left: 5px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-display-riwayat {
+  margin: 0px;
+  margin-left: 18px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.poin-display-riwayat {
+  margin: 0px;
+  margin-right: 18px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.scrollable-riwayat-penukaran {
+  padding-top: 20px;
+  padding-bottom: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 13px;
+  align-items: center;
+  justify-items: center;
+
+  overflow-y: auto;
+  width: 100vw;
+}
+
+.display-riwayat-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,70 @@
+.popup-overlay {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  z-index: 99999;
+}
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 284px;
+  height: 284px;
+
+  background-color: white;
+  border-radius: 40px;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-title {
+  margin: 0px;
+  margin-bottom: 5px;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.popup-subtitle {
+  margin: 0px;
+
+  font-size: 13px;
+  width: 190px;
+  text-align: center;
+}
+
+.popup-button {
+  position: absolute;
+  bottom: 22px;
+
+  width: 187px;
+  height: 40px;
+
+  border-radius: 155px;
+  border-style: none;
+
+  color: white;
+  background-color: #60BA62;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-berhasil {
+  margin-top: 34px;
+
+  font-size: 120px;
+
+  color: #60BA62;
+}

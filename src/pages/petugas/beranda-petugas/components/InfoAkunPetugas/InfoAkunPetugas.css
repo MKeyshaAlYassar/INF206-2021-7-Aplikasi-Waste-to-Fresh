@@ -1,0 +1,31 @@
+.profil-container-petugas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.foto-profil-beranda {
+  width: 41px;
+  height: 41px;
+  border-radius: 17px;
+  margin: 18px 0;
+  margin-left: 23px;
+}
+
+.profil-container div {
+  margin-left:12px;
+}
+
+.sapaan-petugas-beranda {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #CBFFCC;
+}
+
+.nama-petugas-beranda {
+  margin-top: 0px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+}

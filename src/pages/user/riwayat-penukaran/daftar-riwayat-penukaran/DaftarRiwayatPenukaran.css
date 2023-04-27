@@ -1,0 +1,112 @@
+.riwayat-penukaran-container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #60BA62;
+}
+
+.tombol-kembali {
+  text-decoration: none;
+  color: white;
+
+  position: absolute;
+  left: 23px;
+  top: 27px;
+
+  margin: 0px;
+}
+
+.header-riwayat-penukaran {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-riwayat-penukaran > p {
+  color: white;
+}
+
+.judul-fitur {
+  font-size: 17px;
+  font-weight: 500;
+
+  margin-top: 27px;
+  margin-bottom: 0px;
+}
+
+.fitur-riwayat-penukaran-container {
+  position: absolute;
+  top: 70px;
+  bottom: 0px;
+
+  width: 100vw;
+
+  background-color: #F9F9F9;
+
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+}
+
+.filter-riwayat-penukaran-container {
+  margin-top: 20px ;
+  width: 100vw;
+
+  height: 54px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-shadow: 0 5px 10px -5px #d9d9d9;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.filter-riwayat-tukar-sampah {
+  text-decoration: none;
+
+  width: 144px;
+  height: 39px;
+
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  margin-left: 28px;
+}
+
+.filter-riwayat-tukar-poin {
+  text-decoration: none;
+
+  width: 144px;
+  height: 39px;
+
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 28px
+}
+
+.filter-riwayat-tukar-sampah.active,
+.filter-riwayat-tukar-poin.active {
+  color: white;
+  background-color: #60BA62;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.daftar-riwayat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  height: calc(100vh - 164px);
+  overflow-y: scroll;
+}
