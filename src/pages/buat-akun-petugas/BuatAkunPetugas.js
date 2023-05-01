@@ -115,7 +115,7 @@ export default function BuatAkunPetugas() {
           value={formData.password}
         />
 
-        <button>Buat Akun</button>
+        <button className="tombol-buat-akun-petugas">Buat Akun</button>
 
         <p className="sudah-punya-akun-petugas-link">
           Sudah punya akun?<Link to="/login-petugas">Masuk</Link>

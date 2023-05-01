@@ -81,7 +81,7 @@ export default function UserForm() {
           value={formData.password}
         />
 
-        <button className="masuk-button">Masuk</button>
+        <button className="tombol-login-user">Masuk</button>
       </form>
       <p className="buat-akun-link">
         Belum punya akun? <Link to="/buat-akun-user">Buat Akun</Link>

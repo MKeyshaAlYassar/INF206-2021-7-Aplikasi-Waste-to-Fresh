@@ -45,16 +45,19 @@ export default function LoginPetugas() {
         </p>
       </div>
       <form onSubmit={handleSubmit}>
+        <p>Alamat Email</p>
         <input
-          className="email-input"
+          className="input-form-login-petugas"
           type="email"
           placeholder="Alamat Email"
           onChange={handleChange}
           name="email"
           value={formData.email}
         />
+
+        <p>Kata Sandi</p>
         <input
-          className="pass-input"
+          className="input-form-login-petugas"
           type="password"
           placeholder="Kata Sandi"
           onChange={handleChange}
@@ -62,7 +65,7 @@ export default function LoginPetugas() {
           value={formData.password}
         />
 
-        <button className="masuk-button">Masuk</button>
+        <button className="tombol-login-petugas">Masuk</button>
       </form>
       <p className="buat-akun-link">
         Belum punya akun?
