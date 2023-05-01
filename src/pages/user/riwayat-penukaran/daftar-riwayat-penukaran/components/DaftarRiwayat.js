@@ -63,7 +63,6 @@ export default function DaftarRiwayat(props) {
     }
 
     // Format timestamp
-    // Format the timestamp
     const tanggal = item.waktu.toDate().toLocaleDateString("id-ID", {
       year: "numeric",
       month: "long",

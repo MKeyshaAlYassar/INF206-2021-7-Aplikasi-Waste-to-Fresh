@@ -18,7 +18,6 @@ import TukarPoin from "./pages/user/tukar-poin/TukarPoin";
 import StrukTukarPoin from "./pages/user/tukar-poin/StrukTukarPoin";
 import CekKonversiSampah from "./pages/user/cek-konversi-sampah/CekKonversiSampah";
 import DaftarRiwayatPenukaran from "./pages/user/riwayat-penukaran/daftar-riwayat-penukaran/DaftarRiwayatPenukaran";
-import DaftarRiwayat from "./pages/user/riwayat-penukaran/daftar-riwayat-penukaran/components/DaftarRiwayat";
 import RincianRiwayatTukarPoin from "./pages/user/riwayat-penukaran/rincian-tukar-poin/RincianRiwayatTukarPoin";
 import RincianRiwayatTukarSampah from "./pages/user/riwayat-penukaran/rincian-tukar-sampah/RincianRiwayatTukarSampah";
 

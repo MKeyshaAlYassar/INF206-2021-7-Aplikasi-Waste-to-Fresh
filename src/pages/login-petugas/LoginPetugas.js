@@ -37,46 +37,40 @@ export default function LoginPetugas() {
   };
 
   return (
-    <>
-      <Header />
-      <div className="content-div">
-        <div className="title-div">
-          <h1 className="title-text">Masuk Sebagai Petugas</h1>
-          <p className="subtitle-text">
-            Silahkan masuk menggunakan akun Petugas Waste to Fresh Anda
-          </p>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <input
-            className="email-input"
-            type="email"
-            placeholder="Alamat Email"
-            onChange={handleChange}
-            name="email"
-            value={formData.email}
-          />
-          <input
-            className="pass-input"
-            type="password"
-            placeholder="Kata Sandi"
-            onChange={handleChange}
-            name="password"
-            value={formData.password}
-          />
+    <div className="login-petugas-container">
+      <div className="header-login-petugas">
+        <h1 className="judul-login-petugas">Masuk Sebagai Petugas</h1>
+        <p className="subjudul-login-petugas">
+          Silahkan masuk menggunakan akun Petugas Waste to Fresh Anda
+        </p>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input
+          className="email-input"
+          type="email"
+          placeholder="Alamat Email"
+          onChange={handleChange}
+          name="email"
+          value={formData.email}
+        />
+        <input
+          className="pass-input"
+          type="password"
+          placeholder="Kata Sandi"
+          onChange={handleChange}
+          name="password"
+          value={formData.password}
+        />
 
-          <button className="masuk-button">Masuk</button>
-          <p className="buat-akun-link">
-            Belum punya akun?{" "}
-            <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
-          </p>
-          <p className="ubah-pass-link">
-            Lupa kata sandi? <span className="link-text">Ubah kata sandi</span>
-          </p>
-        </form>
-      </div>
-      <div className="login-petugas-link">
-        <Link to="/">Masuk sebagai user</Link>
-      </div>
-    </>
+        <button className="masuk-button">Masuk</button>
+      </form>
+      <p className="buat-akun-link">
+        Belum punya akun?
+        <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
+      </p>
+      <Link to="/" className="login-petugas-link">
+        Masuk sebagai user
+      </Link>
+    </div>
   );
 }

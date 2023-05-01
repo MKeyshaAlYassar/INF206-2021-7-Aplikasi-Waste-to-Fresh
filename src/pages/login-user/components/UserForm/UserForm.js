@@ -52,44 +52,43 @@ export default function UserForm() {
   };
 
   return (
-    <>
-      <div className="content-div">
-        <div className="title-div">
-          <h1 className="title-text">Selamat Datang</h1>
-          <p className="subtitle-text">Silahkan masuk menggunakan akun Anda</p>
-        </div>
-
-        <form onSubmit={handleSubmit}>
-          <input
-            className="email-input"
-            type="email"
-            placeholder="Alamat Email"
-            onChange={handleChange}
-            name="email"
-            value={formData.email}
-          />
-          <input
-            className="pass-input"
-            type="password"
-            placeholder="Kata Sandi"
-            onChange={handleChange}
-            name="password"
-            value={formData.password}
-          />
-
-          <button className="masuk-button">Masuk</button>
-
-          <p className="buat-akun-link">
-            Belum punya akun? <Link to="/buat-akun-user">Buat Akun</Link>
-          </p>
-          <p className="ubah-pass-link">
-            Lupa kata sandi? <span className="link-text">Ubah kata sandi</span>
-          </p>
-        </form>
+    <div className="login-user-container">
+      <div className="header-login-user">
+        <h1 className="judul-login-user">Selamat Datang</h1>
+        <p className="subjudul-login-user">
+          Silahkan masuk menggunakan akun Anda
+        </p>
       </div>
-      <div className="login-petugas-link">
-        <Link to="/login-petugas">Masuk sebagai petugas</Link>
-      </div>
-    </>
+
+      <p>Alamat Email</p>
+      <form onSubmit={handleSubmit}>
+        <input
+          className="input-form-login-user"
+          type="email"
+          placeholder="Alamat Email"
+          onChange={handleChange}
+          name="email"
+          value={formData.email}
+        />
+
+        <p>Kata Sandi</p>
+        <input
+          className="input-form-login-user"
+          type="password"
+          placeholder="Kata Sandi"
+          onChange={handleChange}
+          name="password"
+          value={formData.password}
+        />
+
+        <button className="masuk-button">Masuk</button>
+      </form>
+      <p className="buat-akun-link">
+        Belum punya akun? <Link to="/buat-akun-user">Buat Akun</Link>
+      </p>
+      <Link to="/login-petugas" className="login-petugas-link">
+        Masuk sebagai petugas
+      </Link>
+    </div>
   );
 }

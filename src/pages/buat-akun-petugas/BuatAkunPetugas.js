@@ -20,7 +20,6 @@ export default function BuatAkunPetugas() {
     email: "",
     noHP: "",
     password: "",
-    repeatPassword: "",
   });
 
   const [error, setError] = useState("");
@@ -64,51 +63,64 @@ export default function BuatAkunPetugas() {
   };
 
   return (
-    <>
-      <Header />
-      <h1>Buat Akun Petugas</h1>
-      <p>Silahkan buat akun Petugas Waste to Fresh Anda</p>
-      <form onSubmit={handleSubmit}>
+    <div className="buat-akun-petugas-container">
+      <Link className="tombol-kembali" to="/login-petugas">
+        &lt;
+      </Link>
+      <div className="header-buat-akun-petugas">
+        <h1 className="judul-buat-akun-petugas">Buat Akun Petugas</h1>
+        <p className="subjudul-buat-akun-petugas">
+          Silahkan buat akun Petugas Waste to Fresh Anda
+        </p>
+      </div>
+
+      <form className="form-buat-akun-petugas" onSubmit={handleSubmit}>
+        <p>Nama Pengguna</p>
         <input
+          className="input-buat-akun-petugas"
           type="text"
           placeholder="Nama Pengguna"
           onChange={handleChange}
           name="namaPengguna"
           value={formData.namaPengguna}
         />
+
+        <p>Alamat Email</p>
         <input
+          className="input-buat-akun-petugas"
           type="email"
           placeholder="Alamat Email"
           onChange={handleChange}
           name="email"
           value={formData.email}
         />
+
+        <p>Nomor Telepon</p>
         <input
+          className="input-buat-akun-petugas"
           type="tel"
           placeholder="Nomor Telepon"
           onChange={handleChange}
           name="noHP"
           value={formData.noHP}
         />
+
+        <p>Password</p>
         <input
+          className="input-buat-akun-petugas"
           type="password"
           placeholder="Kata Sandi"
           onChange={handleChange}
           name="password"
           value={formData.password}
         />
-        <input
-          type="password"
-          placeholder="Ulangi Kata Sandi"
-          onChange={handleChange}
-          name="repeatPassword"
-          value={formData.repeatPassword}
-        />
+
         <button>Buat Akun</button>
+
+        <p className="sudah-punya-akun-petugas-link">
+          Sudah punya akun?<Link to="/login-petugas">Masuk</Link>
+        </p>
       </form>
-      <p>
-        Sudah punya akun?<Link to="/login-petugas">Masuk</Link>
-      </p>
-    </>
+    </div>
   );
 }

@@ -21,7 +21,6 @@ export default function BuatAkunUser() {
     email: "",
     noHP: "",
     password: "",
-    repeatPassword: "",
   });
 
   const [error, setError] = useState("");
@@ -66,51 +65,64 @@ export default function BuatAkunUser() {
   };
 
   return (
-    <>
-      <Header />
-      <h1>Buat Akun</h1>
-      <p>Silahkan buat akun Waste to Fresh Anda</p>
-      <form onSubmit={handleSubmit}>
+    <div className="buat-akun-user-container">
+      <Link className="tombol-kembali" to="/">
+        &lt;
+      </Link>
+      <div className="header-buat-akun-user">
+        <h1 className="judul-buat-akun-user">Buat Akun</h1>
+        <p className="subjudul-buat-akun-user">
+          Silahkan buat akun Waste to Fresh Anda
+        </p>
+      </div>
+
+      <form className="form-buat-akun-user" onSubmit={handleSubmit}>
+        <p>Nama Pengguna</p>
         <input
+          className="input-form-buat-akun-user"
           type="text"
           placeholder="Nama Pengguna"
           onChange={handleChange}
           name="namaPengguna"
           value={formData.namaPengguna}
         />
+
+        <p>Alamat Email</p>
         <input
+          className="input-form-buat-akun-user"
           type="email"
           placeholder="Alamat Email"
           onChange={handleChange}
           name="email"
           value={formData.email}
         />
+
+        <p>Nomor Telepon</p>
         <input
+          className="input-form-buat-akun-user"
           type="tel"
           placeholder="Nomor Telepon"
           onChange={handleChange}
           name="noHP"
           value={formData.noHP}
         />
+
+        <p>Kata Sandi</p>
         <input
+          className="input-form-buat-akun-user"
           type="password"
           placeholder="Kata Sandi"
           onChange={handleChange}
           name="password"
           value={formData.password}
         />
-        <input
-          type="password"
-          placeholder="Ulangi Kata Sandi"
-          onChange={handleChange}
-          name="repeatPassword"
-          value={formData.repeatPassword}
-        />
+
         <button>Buat Akun</button>
+
+        <p className="sudanh-punya-akun-user-link">
+          Sudah punya akun?<Link to="/">Masuk</Link>
+        </p>
       </form>
-      <p>
-        Sudah punya akun?<Link to="/">Masuk</Link>
-      </p>
-    </>
+    </div>
   );
 }

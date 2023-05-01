@@ -23,6 +23,13 @@ export default function RincianRiwayatTukarSampah() {
 
   console.log(dataRincian);
 
+  // Format timestamp
+  const tanggal = dataRincian.waktu?.toDate().toLocaleDateString("id-ID", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div className="rincian-tukar-sampah-container">
       <Link className="tombol-kembali" to="/riwayat-user">
@@ -39,7 +46,7 @@ export default function RincianRiwayatTukarSampah() {
           <p className="informasi-isi">{dataRincian.status}</p>
 
           <p className="informasi-subject">Tanggal Penukaran</p>
-          <p className="informasi-isi">15 Oktober 2003</p>
+          <p className="informasi-isi">{tanggal}</p>
 
           <p className="informasi-subject">Petugas Pemroses</p>
           <p className="informasi-isi">
