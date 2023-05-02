@@ -18,20 +18,20 @@ export default function ProfilUser() {
   };
 
   return (
-    <>
-      <div>
-        <Link to="/beranda-user">
+    <div className="profil-user-container">
+      <div className="header-profil-user">
+        <Link className="tombol-kembali-profil" to="/beranda-user">
           <p>&lt;</p>
         </Link>
-        <p>Profil</p>
+        <p className="judul-fitur">Profil</p>
       </div>
-      <div>
-        <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" />
-        <p>Halo, Pengguna kami</p>
-        <button>Ubah Profil</button>
-        <button>Ubah Kata Sandi</button>
-        <button onClick={handleLogout}>Keluar Akun</button>
+      <div className="fitur-profil-user-container">
+        <img className="gambar-profile-user" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" />
+        <p className="halo-pengguna">Halo, Pengguna kami</p>
+        <button className="tombol-ubah-profil">Ubah Profil</button>
+        <button className="tombol-ubah-kata-sandi">Ubah Kata Sandi</button>
+        <button className="tombol-keluar-akun" onClick={handleLogout}>Keluar Akun</button>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,105 @@
+.profil-user-container {
+    background-color: #60BA62;
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+}
+
+.header-profil-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Sagoe UI;
+    color: aliceblue;
+}
+
+.fitur-profil-user-container {
+    position: absolute;
+  top: 70px;
+  bottom: 0px;
+
+  width: 100vw;
+
+  background-color: #F9F9F9;
+
+    border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.judul-fitur {
+    font-size: 17px;
+    font-weight: 500;
+  
+    margin-top: 27px;
+    margin-bottom: 0px;
+  }
+
+.gambar-profile-user{
+  width: 73px;
+  border-radius: 37px;  
+  margin-top: 41px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tombol-ubah-profil {
+    margin-bottom: 22px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #60BA62;
+    border: none;
+    width: 306px;
+    height: 45px;
+    font-weight: 500;
+}
+
+.tombol-keluar-akun {
+    position: absolute;
+    bottom: 45px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #60BA62;
+    border: white 3px solid;
+    padding: 12px 20px;
+}
+
+.tombol-kembali-profil {
+    
+    text-decoration: none;
+  color: white;
+
+  position: absolute;
+  left: 23px;
+  top: 13px;
+
+  margin: 0px;
+
+    
+}
+
+.tombol-ubah-kata-sandi {
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #60BA62;
+    border: none;
+    width: 306px;
+    height: 45px;
+    font-size: 13px;
+    font-weight: 500;
+
+    
+}
+
+.halo-pengguna{
+    
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 41px;
+    font-size: 17px;
+}
