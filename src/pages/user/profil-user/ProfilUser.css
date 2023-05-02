@@ -48,16 +48,7 @@
   font-weight: 500;
 }
 
-.tombol-ubah-profil {
-    margin-bottom: 22px;
-    border-radius: 15px;
-    color: rgb(255, 255, 255);
-    background-color: #60BA62;
-    border: none;
-    width: 306px;
-    height: 45px;
-    font-weight: 500;
-}
+
 
 .tombol-keluar-akun {
     position: absolute;
@@ -102,4 +93,29 @@
     font-weight: 500;
     margin-bottom: 41px;
     font-size: 17px;
+}
+
+.info-profil-user-container{
+
+  width: 85vw; 
+  border: 1px solid #999;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  background-color: #60BA62;
+
+}
+
+.nama-user{
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-weight: 500;
+
+}
+
+.nomor-telepon-user{
+color: white;
+margin-left: 15px;
+font-weight: 500;
+
 }
