@@ -119,8 +119,8 @@ export default function BuatAkunUser() {
 
         <button className="tombol-buat-akun-user">Buat Akun</button>
 
-        <p className="sudanh-punya-akun-user-link">
-          Sudah punya akun?<Link to="/">Masuk</Link>
+        <p className="sudah-punya-akun-user-link">
+          Sudah punya akun?<Link to="/login-user" className="link-masuk-user">Masuk</Link>
         </p>
       </form>
     </div>
