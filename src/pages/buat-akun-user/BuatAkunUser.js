@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import "./BuatAkunUser.css";
-import { async } from "@firebase/util";
 import { UserAuth } from "../../context/AuthContext";
 import {
   collection,
@@ -14,6 +12,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
+import PopUpGagal from "../components/popup/PopUpGagal";
 
 export default function BuatAkunUser() {
   const [formData, setFormData] = useState({
@@ -24,6 +23,9 @@ export default function BuatAkunUser() {
   });
 
   const [error, setError] = useState("");
+
+  // State untuk pop up kesalahan
+  const [passwordLemah, setPasswordLemah] = useState(false);
 
   const { createUser, login } = UserAuth();
   const navigate = useNavigate();
@@ -40,6 +42,12 @@ export default function BuatAkunUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Cek password lemah
+    if (formData.password.length < 7) {
+      setPasswordLemah(true);
+      return;
+    }
 
     // Buat akun ke autentikasi
     try {
@@ -119,10 +127,23 @@ export default function BuatAkunUser() {
 
         <button className="tombol-buat-akun-user">Buat Akun</button>
 
-        <p className="sudanh-punya-akun-user-link">
-          Sudah punya akun?<Link to="/">Masuk</Link>
+        <p className="sudah-punya-akun-user-link">
+          Sudah punya akun?
+          <Link to="/" className="link-masuk-user">
+            Masuk
+          </Link>
         </p>
       </form>
+
+      <PopUpGagal
+        open={passwordLemah}
+        onClose={() => {
+          setPasswordLemah(false);
+        }}
+        title="Kata Sandi Lemah"
+        subtitle="Kata sandi harus lebih dari 6 karakter"
+        tombol="Tutup"
+      />
     </div>
   );
 }

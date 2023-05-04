@@ -1,7 +1,3 @@
-import { useState, useEffect } from "react";
-import { db } from "../../../../firebase";
-import { collection, getDocs } from "firebase/firestore";
-
 export default function DisplayMakanan(props) {
   // Ambil data bahan makanan dari props
   const dataBahanMakanan = props.data;
