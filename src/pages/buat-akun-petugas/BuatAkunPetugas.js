@@ -126,12 +126,13 @@ export default function BuatAkunPetugas() {
         />
 
         <button className="tombol-buat-akun-petugas">Buat Akun</button>
-        <p></p>
-        <p className="sudah-punya-akun-petugas-link">
-          Sudah punya akun?<Link to="/login-petugas" className="link-masuk-petugas">Masuk</Link>
-        </p>
 
-        
+        <p className="sudah-punya-akun-petugas-link">
+          Sudah punya akun?
+          <Link to="/login-petugas" className="link-masuk-petugas">
+            Masuk
+          </Link>
+        </p>
       </form>
 
       <PopUpGagal
