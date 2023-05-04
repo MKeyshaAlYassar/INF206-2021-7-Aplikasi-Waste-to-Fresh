@@ -13,6 +13,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
+import PopUpGagal from "../components/popup/PopUpGagal";
 
 export default function BuatAkunPetugas() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,9 @@ export default function BuatAkunPetugas() {
   });
 
   const [error, setError] = useState("");
+
+  // State untuk pop up kesalahan
+  const [passwordLemah, setPasswordLemah] = useState(false);
 
   const { createUser, login } = UserAuth();
   const navigate = useNavigate();
@@ -39,6 +43,12 @@ export default function BuatAkunPetugas() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Cek password lemah
+    if (formData.password.length < 7) {
+      setPasswordLemah(true);
+      return;
+    }
 
     // Buat akun ke autentikasi
     try {
@@ -121,6 +131,16 @@ export default function BuatAkunPetugas() {
           Sudah punya akun?<Link to="/login-petugas">Masuk</Link>
         </p>
       </form>
+
+      <PopUpGagal
+        open={passwordLemah}
+        onClose={() => {
+          setPasswordLemah(false);
+        }}
+        title="Kata Sandi Lemah"
+        subtitle="Kata sandi harus lebih dari 6 karakter"
+        tombol="Tutup"
+      />
     </div>
   );
 }

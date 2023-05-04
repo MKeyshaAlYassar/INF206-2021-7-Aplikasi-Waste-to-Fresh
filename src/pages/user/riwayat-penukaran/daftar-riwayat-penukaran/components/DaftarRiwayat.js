@@ -31,6 +31,7 @@ export default function DaftarRiwayat(props) {
         }));
         setDataPenukaranUser(filteredData);
         console.log(filteredData);
+        console.log(filteredData.length);
       } catch (err) {
         console.error(err);
       }
@@ -105,5 +106,12 @@ export default function DaftarRiwayat(props) {
     );
   });
 
-  return <div className="scrollable-riwayat-penukaran">{daftarDisplay}</div>;
+  return (
+    <div className="scrollable-riwayat-penukaran">
+      {dataPenukaranUser.length === 0 && (
+        <p className="belum-ada-penukaran">Anda Belum Memiliki Penukaran</p>
+      )}
+      {daftarDisplay}
+    </div>
+  );
 }

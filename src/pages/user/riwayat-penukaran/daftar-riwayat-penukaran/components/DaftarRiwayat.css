@@ -86,3 +86,12 @@
   text-decoration: none;
   color: inherit;
 }
+
+.belum-ada-penukaran {
+  position: absolute;
+  top: 90px;
+
+  color: #A0A0A0;
+
+  z-index: 9999;
+}
