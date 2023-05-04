@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { UserAuth } from "../../../context/AuthContext";
 import PopUpBerhasil from "../../components/popup/PopUpBerhasil";
+import PopUpGagal from "../../components/popup/PopUpGagal";
 
 export default function TukarSampah() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,9 @@ export default function TukarSampah() {
   });
 
   const [error, setError] = useState("");
+
+  // State untuk tangkap error
+  const [formKosong, setFormKosong] = useState(false)
 
   // State untuk popup di component yang mau ada popup
   const navigate = useNavigate();
@@ -38,6 +42,12 @@ export default function TukarSampah() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Cek form kosong
+    if (formData.namaPenukar === "" || formData.noHP === "" || formData.alamatAmbil === "" || formData.fotoSampah === null) {
+      setFormKosong(true)
+      return;
+    }
 
     // Ambil timestamp sekarang
     const now = Date.now();
@@ -134,6 +144,16 @@ export default function TukarSampah() {
         subtitle="Penukaran Anda akan segera diproses oleh petugas"
         tombol="Kembali Ke Beranda"
       />
+
+      <PopUpGagal
+        open={formKosong}
+        onClose={() => {
+          setFormKosong(false);
+        }}
+        title="Gagal"
+        subtitle="Masukan tidak boleh kosong"
+        tombol="Tutup"
+      />;
     </div>
   );
 }
