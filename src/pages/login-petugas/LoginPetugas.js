@@ -90,13 +90,6 @@ export default function LoginPetugas() {
         </Link>
       </form>
 
-      <p className="buat-akun-link">
-        Belum punya akun?
-        <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
-      </p>
-      <Link to="/" className="login-petugas-link">
-        Masuk sebagai user
-      </Link>
 
       <PopUpGagal
         open={salahPassword}
