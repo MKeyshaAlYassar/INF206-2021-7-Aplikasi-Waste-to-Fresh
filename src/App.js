@@ -13,6 +13,7 @@ import ProfilPetugas from "./pages/petugas/profil-petugas/ProfilPetugas";
 import ProtectedRouteUser from "./pages/components/ProtectedRouteUser";
 import ProtectedRoutePetugas from "./pages/components/ProtectedRoutePetugas";
 import NavbarUser from "./pages/components/NavbarUser/NavbarUser";
+import NavbarPetugas from "./pages/components/NavbarPetugas/NavbarPetugas";
 import TukarSampah from "./pages/user/tukar-sampah/TukarSampah";
 import TukarPoin from "./pages/user/tukar-poin/TukarPoin";
 import StrukTukarPoin from "./pages/user/tukar-poin/StrukTukarPoin";
@@ -20,6 +21,7 @@ import CekKonversiSampah from "./pages/user/cek-konversi-sampah/CekKonversiSampa
 import DaftarRiwayatPenukaran from "./pages/user/riwayat-penukaran/daftar-riwayat-penukaran/DaftarRiwayatPenukaran";
 import RincianRiwayatTukarPoin from "./pages/user/riwayat-penukaran/rincian-tukar-poin/RincianRiwayatTukarPoin";
 import RincianRiwayatTukarSampah from "./pages/user/riwayat-penukaran/rincian-tukar-sampah/RincianRiwayatTukarSampah";
+import BahanMakanan from "./pages/petugas/bahan-makanan/BahanMakanan";
 
 function App() {
   return (
@@ -67,7 +69,17 @@ function App() {
 
           <Route element={<ProtectedRoutePetugas />}>
             <Route path="/profil-petugas" element={<ProfilPetugas />} />
-            <Route path="/beranda-petugas" element={<BerandaPetugas />} />
+
+            <Route element={<NavbarPetugas />}>
+              <Route path="/beranda-petugas" element={<BerandaPetugas />} />
+
+              <Route
+                path="/penukaran-petugas"
+                element={<h1>Halaman Penukaran Petugas</h1>}
+              />
+
+              <Route path="/bahan-makanan" element={<BahanMakanan />} />
+            </Route>
           </Route>
         </Routes>
       </AuthContextProvider>

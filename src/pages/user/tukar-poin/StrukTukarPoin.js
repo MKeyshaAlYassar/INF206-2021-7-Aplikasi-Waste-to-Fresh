@@ -265,6 +265,7 @@ export default function StrukTukarPoin() {
           }}
           title="Tunggu ya"
           subtitle="Penukaran Anda akan segera diproses oleh petugas"
+          tombol="Kembali Ke Beranda"
         />
       </div>
     </div>

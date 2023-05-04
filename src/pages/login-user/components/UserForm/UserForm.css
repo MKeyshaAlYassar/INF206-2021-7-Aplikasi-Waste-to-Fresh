@@ -1,0 +1,123 @@
+.login-user-container {
+  position: absolute;
+  bottom: 0px;
+  top: 288px;
+  background-color: white;
+
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+
+  margin-top: -40px;
+
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-login-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.judul-login-user {
+  margin: 0px;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-size: 28px;
+}
+
+.subjudul-login-user {
+  margin: 0px;
+
+  font-size: 15px;
+}
+
+.form-login-user-container {
+  width: 297px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 40px;
+}
+
+.form-login-user-container > p {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #A0A0A0;
+
+  margin-left: 5px;
+  margin-bottom: 8px;
+}
+
+.form-login-user-container > input {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 40px;
+
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+
+  border-color: #60BA62;
+
+  margin-bottom: 18px;
+}
+
+.form-login-user-container > input:focus {
+  outline: none;
+
+  border-width:2px;
+  border-color: #FF9800;
+}
+
+.tombol-login-user {
+  position:fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  width: 300px;
+
+  height: 40px;
+
+  border-radius: 80px;
+
+  color: white;
+  background-color: #60BA62;
+  border: none;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+  z-index: 9999;
+}
+
+.buat-akun-link {
+  font-size: 14px;
+  color: #A0A0A0;
+
+  position: fixed;
+  bottom: 45px;
+}
+
+.link-buat-akun-user {
+  color: #60BA62;
+  font-weight: 500;
+}
+
+.login-petugas-link {
+  font-size: 14px;
+  color: #60BA62;
+  font-weight: 500;
+
+  position: fixed;
+  bottom: 30px;
+}
