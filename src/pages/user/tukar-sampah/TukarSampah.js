@@ -20,7 +20,7 @@ export default function TukarSampah() {
   const [error, setError] = useState("");
 
   // State untuk tangkap error
-  const [formKosong, setFormKosong] = useState(false)
+  const [formKosong, setFormKosong] = useState(false);
 
   // State untuk popup di component yang mau ada popup
   const navigate = useNavigate();
@@ -44,8 +44,13 @@ export default function TukarSampah() {
     setError("");
 
     // Cek form kosong
-    if (formData.namaPenukar === "" || formData.noHP === "" || formData.alamatAmbil === "" || formData.fotoSampah === null) {
-      setFormKosong(true)
+    if (
+      formData.namaPenukar === "" ||
+      formData.noHP === "" ||
+      formData.alamatAmbil === "" ||
+      formData.fotoSampah === null
+    ) {
+      setFormKosong(true);
       return;
     }
 
@@ -153,7 +158,7 @@ export default function TukarSampah() {
         title="Gagal"
         subtitle="Masukan tidak boleh kosong"
         tombol="Tutup"
-      />;
+      />
     </div>
   );
 }
