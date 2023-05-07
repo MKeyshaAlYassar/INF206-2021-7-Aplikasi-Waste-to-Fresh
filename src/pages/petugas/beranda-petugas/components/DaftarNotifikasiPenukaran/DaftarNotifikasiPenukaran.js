@@ -35,7 +35,7 @@ export default function DaftarNotifikasiPenukaran(props) {
 
   // Urutin data berdasarkan waktu
   const sortedDataPenukaran = dataPenukaran.sort(
-    (a, b) => b.waktu.seconds - a.waktu.seconds
+    (a, b) => a.waktu.seconds - b.waktu.seconds
   );
 
   // Buat tampilan daftarnya
