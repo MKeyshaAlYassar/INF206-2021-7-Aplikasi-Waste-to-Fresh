@@ -1,0 +1,181 @@
+.rincian-notifikasi-tukar-sampah-container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #60BA62;
+}
+
+.tombol-kembali {
+  text-decoration: none;
+  color: white;
+
+  position: absolute;
+  left: 23px;
+  top: 27px;
+
+  margin: 0px;
+}
+
+.header-rincian-notifikasi-tukar-sampah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-rincian-notifikasi-tukar-sampah > p {
+  color: white;
+}
+
+.judul-fitur {
+  font-size: 17px;
+  font-weight: 500;
+
+  margin-top: 27px;
+  margin-bottom: 0px;
+}
+
+.deskripsi-fitur {
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+.fitur-rincian-notifikasi-tukar-sampah-container {
+  position: absolute;
+  top: 90px;
+  bottom: 0px;
+
+  padding-top: 23px;
+
+  width: 100vw;
+
+  background-color: #F9F9F9;
+
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.informasi-notifikasi-penukaran-sampah {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 25px auto auto auto;
+  gap: 8px;
+
+  width: 314px;
+  padding: 20px 0px;
+
+  color: white;
+  background-color: #60BA62;
+
+  border-radius: 30px;
+
+  margin-bottom: 16px;
+}
+
+.informasi-notifikasi-data-penukar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 25px auto auto auto auto;
+  gap: 8px;
+
+  width: 314px;
+  padding: 20px 0px;
+
+  color: white;
+  background-color: #60BA62;
+
+  border-radius: 30px;
+
+  margin-bottom: 7px;
+}
+
+.judul-informasi {
+  margin: 0px;
+  margin-left: 25px;
+
+  grid-column: span 2;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.informasi-subject {
+  margin: 0px;
+  margin-left: 25px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.informasi-isi {
+  margin: 0px;
+  margin-right: 25px;
+
+  justify-self: end;
+
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.informasi-subject-alamat {
+  grid-column: span 2;
+
+  margin: 0px;
+  margin-left: 25px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.informasi-isi-alamat {
+  grid-column: span 2;
+
+  margin: 0px;
+  margin-left: 25px;
+
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.judul-foto-sampah {
+  align-self: start;
+  
+  margin-left: 45px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.foto-sampah {
+  width: 305px; /* set the width of the cropped image */
+  height: 150px; /* set the height of the cropped image */
+  object-fit: cover; /* crop the image to cover the entire container */
+  object-position: center; /* crop the image from the center */
+  border-radius: 28px;
+}
+
+.tombol-terima-notifikasi-tukar-sampah {
+  position: fixed;
+  bottom: 40px;
+
+  width: 150px;
+  height: 40px;
+
+  border: none;
+  border-radius: 20px;
+
+  color: white;
+  background-color: #60BA62;
+
+  font-size: 14px;
+  font-weight: 500;
+}
