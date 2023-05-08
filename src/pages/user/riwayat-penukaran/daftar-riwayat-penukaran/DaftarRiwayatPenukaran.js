@@ -6,7 +6,6 @@ import { collection, getDocs } from "firebase/firestore";
 import DaftarRiwayat from "./components/DaftarRiwayat";
 
 export default function DaftarRiwayatPenukaran() {
-  // Hapus ini nanti
   const [filter, setFilter] = useState("sampah");
 
   // Fungsi untuk handle ganti filter

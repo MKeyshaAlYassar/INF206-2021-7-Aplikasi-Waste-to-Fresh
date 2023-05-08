@@ -1,7 +1,8 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 
+// Import Halaman
 import LoginUser from "./pages/login-user/LoginUser";
 import LoginPetugas from "./pages/login-petugas/LoginPetugas";
 import BuatAkunUser from "./pages/buat-akun-user/BuatAkunUser";
@@ -22,6 +23,8 @@ import DaftarRiwayatPenukaran from "./pages/user/riwayat-penukaran/daftar-riwaya
 import RincianRiwayatTukarPoin from "./pages/user/riwayat-penukaran/rincian-tukar-poin/RincianRiwayatTukarPoin";
 import RincianRiwayatTukarSampah from "./pages/user/riwayat-penukaran/rincian-tukar-sampah/RincianRiwayatTukarSampah";
 import BahanMakanan from "./pages/petugas/bahan-makanan/BahanMakanan";
+import RincianNotifikasiTukarSampah from "./pages/petugas/beranda-petugas/components/DaftarNotifikasiPenukaran/RincianNotifikasiTukarSampah/RincianNotifikasiTukarSampah";
+import RincianNotifikasiTukarPoin from "./pages/petugas/beranda-petugas/components/DaftarNotifikasiPenukaran/RincianNotifikasiTukarPoin/RincianNotifikasiTukarPoin";
 
 function App() {
   return (
@@ -77,9 +80,18 @@ function App() {
                 path="/penukaran-petugas"
                 element={<h1>Halaman Penukaran Petugas</h1>}
               />
-
               <Route path="/bahan-makanan" element={<BahanMakanan />} />
             </Route>
+
+            <Route
+              path="/rincian-notifikasi-penukaran/tukar-sampah/:id"
+              element={<RincianNotifikasiTukarSampah />}
+            />
+
+            <Route
+              path="/rincian-notifikasi-penukaran/tukar-poin/:id"
+              element={<RincianNotifikasiTukarPoin />}
+            />
           </Route>
         </Routes>
       </AuthContextProvider>
