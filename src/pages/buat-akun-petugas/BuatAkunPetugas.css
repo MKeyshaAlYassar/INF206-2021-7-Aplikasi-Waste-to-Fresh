@@ -1,0 +1,122 @@
+.buat-akun-petugas-container{
+   width: 100vw;
+   height: 100vh;
+   
+   background-color: #60BA62;
+}
+
+.header-buat-akun-petugas {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+
+    align-items: center;
+}
+
+.judul-buat-akun-petugas {
+    color: rgb(255, 255, 255);
+
+    margin: 0px;
+
+    margin-top: 62px;
+}
+
+.subjudul-buat-akun-petugas {
+    color:white;
+
+    margin: 9px;
+    font-size: 15px;
+    width: 200px;
+    text-align: center;
+    
+}
+
+.form-buat-akun-petugas {
+    position: absolute;
+    bottom: 0px;
+    top: 164px;
+
+    background-color: white;
+
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    width: 296px;
+
+    border-top-right-radius: 39px;
+    border-top-left-radius: 39px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buat-akun-petugas > p {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #A0A0A0;
+
+    margin-left: 5px;
+    margin-bottom: 8px;
+}
+
+
+.input-buat-akun-petugas {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+
+     border-radius: 20px;
+     border-width: 1px;
+     border-style: solid;
+
+    border-color: #60BA62;
+
+    margin-bottom: 18px;
+}
+
+.input-buat-akun-petugas:focus {
+    outline: none;
+
+    border-width:2px;
+    border-color: #FF9800;
+}
+
+.tombol-buat-akun-petugas {
+    position:fixed;
+    
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    width: 300px;
+
+    height: 40px;
+
+    border-radius: 80px;
+
+    color: white;
+    background-color: #60BA62;
+    border: none;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+    z-index: 9999;
+}
+
+.sudah-punya-akun-petugas-link {
+    
+    font-size: 15px;
+    align-self: center;
+    position:fixed;
+    bottom: 60px;
+
+    
+}
+
+.link-masuk-petugas {
+    color: #60BA62;
+}

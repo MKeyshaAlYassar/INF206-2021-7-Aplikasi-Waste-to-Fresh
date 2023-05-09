@@ -1,5 +1,6 @@
 import "./InformationCard.css";
+import branding from "../../../../assets/branding-waste-to-fresh.png";
 
 export default function InformationCard() {
-  return <div className="info-card-div"></div>;
+  return <img className="branding" src={branding} />;
 }

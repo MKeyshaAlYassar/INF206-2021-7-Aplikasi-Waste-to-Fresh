@@ -2,12 +2,17 @@ import "./TukarPoin.css";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { db } from "../../../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, where, query } from "firebase/firestore";
 import DisplayMakanan from "./components/DisplayMakanan";
+import PopUpGagal from "./../../components/popup/PopUpGagal";
+import { UserAuth } from "../../../context/AuthContext";
 
 export default function TukarPoin() {
   // State untuk filter
   const [filter, setFilter] = useState("sayur");
+
+  // State untuk pop up
+  const [openPopUpGagal, setOpenPopUpGagal] = useState(false);
 
   // Fungsi untuk handle ganti filter
   function handleFilter(filter) {
@@ -39,6 +44,7 @@ export default function TukarPoin() {
 
   // Fungsi untuk tambah/kurang pilihan bahan makanan
   function handleTambahPilihan(key, perintah) {
+    // Sesuain nama dengan object bahanMakananDipilih
     const formattedKey = key.replace(" ", "_").toLowerCase();
 
     if (perintah === "tambah") {
@@ -113,7 +119,25 @@ export default function TukarPoin() {
   // Handle buka halamana struk
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
+  const { user } = UserAuth();
+  const uidPenukar = user.uid;
+
+  const handleNavigate = async () => {
+    // Cek dulu poin user cukup atau ga
+
+    const userCollectionRef = collection(db, "user");
+
+    const querySnapshot = await getDocs(
+      query(userCollectionRef, where("uid", "==", uidPenukar))
+    );
+
+    const data = querySnapshot.docs[0].data();
+
+    if (data.poin < totalHarga) {
+      setOpenPopUpGagal(true);
+      return;
+    }
+
     navigate("/tukar-poin-struk", {
       state: { dataBahanMakanan, bahanMakananDipilih, filter },
     });
@@ -174,6 +198,16 @@ export default function TukarPoin() {
           <p className="tombol-rincian-jumlah-poin">{totalHarga} Poin</p>
         </div>
       )}
+
+      <PopUpGagal
+        open={openPopUpGagal}
+        onClose={() => {
+          setOpenPopUpGagal(false);
+        }}
+        title="Gagal"
+        subtitle="Poin Anda tidak cukup untuk melakukan penukaran"
+        tombol="Tutup"
+      />
     </div>
   );
 }

@@ -1,16 +1,16 @@
-import "./PopUpBerhasil.css";
-import { TbDiscountCheck } from "react-icons/tb";
+import "./PopUpGagal.css";
+import { TiWarningOutline } from "react-icons/ti";
 
-const PopUpBerhasil = ({ open, onClose, title, subtitle, tombol }) => {
+const PopUpGagal = ({ open, onClose, title, subtitle, tombol }) => {
   if (!open) return null;
 
   return (
     <div className="popup-overlay">
-      <div className="popup-container">
-        <TbDiscountCheck className="icon-berhasil" />
-        <p className="popup-title">{title}</p>
-        <p className="popup-subtitle">{subtitle}</p>
-        <button className="popup-button" onClick={onClose}>
+      <div className="popup-gagal-container">
+        <TiWarningOutline className="icon-gagal" />
+        <p className="popup-gagal-title">{title}</p>
+        <p className="popup-gagal-subtitle">{subtitle}</p>
+        <button className="popup-gagal-button" onClick={onClose}>
           {tombol}
         </button>
       </div>
@@ -18,19 +18,18 @@ const PopUpBerhasil = ({ open, onClose, title, subtitle, tombol }) => {
   );
 };
 
-export default PopUpBerhasil;
+export default PopUpGagal;
 
 // Contoh Pemakaian
 {
-  /* <PopUpBerhasil
+  /* <PopUpGagal
   open={openPopUp}
   onClose={() => {
-    setOpenPopUp(false);
-    navigate("/beranda-user");
+    setOpenPopUpGagal(false);
   }}
-  title="Tunggu ya"
+  title="Gagal"
   subtitle="Penukaran Anda akan segera diproses oleh petugas"
-  tombol="Kembali Ke Beranda"
+  tombol="Tutup"
 />; */
 }
 

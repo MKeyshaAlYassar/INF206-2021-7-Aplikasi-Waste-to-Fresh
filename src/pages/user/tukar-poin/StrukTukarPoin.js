@@ -11,9 +11,9 @@ import {
   query,
   updateDoc,
 } from "firebase/firestore";
-import { User } from "firebase/auth";
 import { UserAuth } from "../../../context/AuthContext";
 import PopUpBerhasil from "../../components/popup/PopUpBerhasil";
+import PopUpGagal from "../../components/popup/PopUpGagal";
 
 export default function StrukTukarPoin() {
   const navigate = useNavigate();
@@ -40,6 +40,9 @@ export default function StrukTukarPoin() {
 
   // State untuk popup
   const [openPopUp, setOpenPopUp] = useState(false);
+
+  // State untuk tangkap error
+  const [formKosong, setFormKosong] = useState(false)
 
   // Ambil state dari halaman pilih item
   useEffect(() => {
@@ -96,6 +99,12 @@ export default function StrukTukarPoin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Cek form kosong
+    if (formData.namaPenukar === "" || formData.noHP === "" || formData.alamatAntar === "") {
+      setFormKosong(true)
+      return;
+    }
 
     // Ambil timestamp sekarang
     const now = Date.now();
@@ -265,6 +274,17 @@ export default function StrukTukarPoin() {
           }}
           title="Tunggu ya"
           subtitle="Penukaran Anda akan segera diproses oleh petugas"
+          tombol="Kembali Ke Beranda"
+        />
+
+        <PopUpGagal
+          open={formKosong}
+          onClose={() => {
+            setFormKosong(false);
+          }}
+          title="Gagal"
+          subtitle="Masukan tidak boleh kosong"
+          tombol="Tutup"
         />
       </div>
     </div>

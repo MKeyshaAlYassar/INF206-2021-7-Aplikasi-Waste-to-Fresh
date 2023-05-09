@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import { UserAuth } from "../../context/AuthContext";
+import "./LoginPetugas.css";
+import PopUpGagal from "../components/popup/PopUpGagal";
 
 export default function LoginPetugas() {
   const [formData, setFormData] = useState({
@@ -10,6 +12,10 @@ export default function LoginPetugas() {
   });
 
   const [error, setError] = useState("");
+
+  // State untuk pop up kesalahan
+  const [salahPassword, setSalahPassword] = useState(false);
+  const [salahEmail, setSalahEmail] = useState(false);
 
   const navigate = useNavigate();
   const { login } = UserAuth();
@@ -30,9 +36,15 @@ export default function LoginPetugas() {
     try {
       await login(formData.email, formData.password);
       navigate("/beranda-petugas");
-    } catch {
-      setError(e.message);
+    } catch (error) {
       console.log(error);
+      if (error.code === "auth/wrong-password") {
+        setSalahPassword(true);
+      } else if (error.code === "auth/user-not-found") {
+        setSalahEmail(true);
+      } else {
+        setError(error.message);
+      }
     }
   };
 
@@ -44,7 +56,7 @@ export default function LoginPetugas() {
           Silahkan masuk menggunakan akun Petugas Waste to Fresh Anda
         </p>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-login-petugas">
         <p>Alamat Email</p>
         <input
           className="input-form-login-petugas"
@@ -66,14 +78,38 @@ export default function LoginPetugas() {
         />
 
         <button className="tombol-login-petugas">Masuk</button>
+
+        <p className="buat-akun-link">
+          Belum punya akun?
+          <Link to="/buat-akun-petugas" className="link-buat-akun-petugas">
+            Buat Akun Petugas
+          </Link>
+        </p>
+        <Link to="/" className="login-petugas-link">
+          Masuk sebagai user
+        </Link>
       </form>
-      <p className="buat-akun-link">
-        Belum punya akun?
-        <Link to="/buat-akun-petugas">Buat Akun Petugas</Link>
-      </p>
-      <Link to="/" className="login-petugas-link">
-        Masuk sebagai user
-      </Link>
+
+
+      <PopUpGagal
+        open={salahPassword}
+        onClose={() => {
+          setSalahPassword(false);
+        }}
+        title="Gagal Masuk"
+        subtitle="Kata sandi yang Anda masukkan salah"
+        tombol="Tutup"
+      />
+
+      <PopUpGagal
+        open={salahEmail}
+        onClose={() => {
+          setSalahEmail(false);
+        }}
+        title="Gagal Masuk"
+        subtitle="Alamat email yang Anda masukkan tidak ditemukan"
+        tombol="Tutup"
+      />
     </div>
   );
 }
