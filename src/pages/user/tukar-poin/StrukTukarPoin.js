@@ -41,8 +41,8 @@ export default function StrukTukarPoin() {
   // State untuk popup
   const [openPopUp, setOpenPopUp] = useState(false);
 
-  // State untuk tangkap error
-  const [formKosong, setFormKosong] = useState(false)
+  // State untuk tangkap error form kosong
+  const [formKosong, setFormKosong] = useState(false);
 
   // Ambil state dari halaman pilih item
   useEffect(() => {
@@ -101,8 +101,12 @@ export default function StrukTukarPoin() {
     setError("");
 
     // Cek form kosong
-    if (formData.namaPenukar === "" || formData.noHP === "" || formData.alamatAntar === "") {
-      setFormKosong(true)
+    if (
+      formData.namaPenukar === "" ||
+      formData.noHP === "" ||
+      formData.alamatAntar === ""
+    ) {
+      setFormKosong(true);
       return;
     }
 
