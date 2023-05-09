@@ -10,6 +10,7 @@ import PopUpBerhasil from "../../components/popup/PopUpBerhasil";
 import PopUpGagal from "../../components/popup/PopUpGagal";
 
 export default function TukarSampah() {
+  // Buat state
   const [formData, setFormData] = useState({
     namaPenukar: "",
     noHP: "",
