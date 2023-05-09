@@ -81,8 +81,6 @@ export default function StrukTukarPoin() {
     alamatAntar: "",
   });
 
-  const [error, setError] = useState("");
-
   function handleChange(event) {
     setFormData((prevFormData) => {
       return {
@@ -98,7 +96,6 @@ export default function StrukTukarPoin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
 
     // Cek form kosong
     if (
