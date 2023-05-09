@@ -37,7 +37,7 @@ export default function TukarSampah() {
     });
   }
 
-  // Ambil uid user yang nukar
+  // Ambil uid user yang menukar
   const { user } = UserAuth();
 
   const handleSubmit = async (e) => {
