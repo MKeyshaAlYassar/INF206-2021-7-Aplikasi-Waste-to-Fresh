@@ -19,7 +19,7 @@ export default function TukarSampah() {
 
   const [error, setError] = useState("");
 
-  // State untuk tangkap error
+  // State untuk tangkap error form kosong
   const [formKosong, setFormKosong] = useState(false);
 
   // State untuk popup di component yang mau ada popup
