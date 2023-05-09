@@ -41,8 +41,8 @@ export default function StrukTukarPoin() {
   // State untuk popup
   const [openPopUp, setOpenPopUp] = useState(false);
 
-  // State untuk tangkap error
-  const [formKosong, setFormKosong] = useState(false)
+  // State untuk tangkap error form kosong
+  const [formKosong, setFormKosong] = useState(false);
 
   // Ambil state dari halaman pilih item
   useEffect(() => {
@@ -81,8 +81,6 @@ export default function StrukTukarPoin() {
     alamatAntar: "",
   });
 
-  const [error, setError] = useState("");
-
   function handleChange(event) {
     setFormData((prevFormData) => {
       return {
@@ -98,11 +96,14 @@ export default function StrukTukarPoin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
 
     // Cek form kosong
-    if (formData.namaPenukar === "" || formData.noHP === "" || formData.alamatAntar === "") {
-      setFormKosong(true)
+    if (
+      formData.namaPenukar === "" ||
+      formData.noHP === "" ||
+      formData.alamatAntar === ""
+    ) {
+      setFormKosong(true);
       return;
     }
 
