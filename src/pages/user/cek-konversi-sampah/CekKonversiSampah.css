@@ -1,0 +1,139 @@
+.cek-konversi-sampah-container{
+    background-color: #FFB547;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-cek-konversi-sampah{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.judul-fitur-cek-konversi-sampah{
+    margin: 0px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    
+}
+
+.deskripsi-fitur-cek-konversi-sampah{
+    width: 201px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    color: white;
+    
+
+}
+
+.fitur-cek-konversi-sampah-container{
+    background-color: white;
+    border-radius: 39px 39px 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    top: 137px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+
+
+}
+
+.fitur-cek-konversi-sampah-container > p {
+    margin: 0px;
+    width: inherit;
+    text-align: left;
+    padding-left: 47.5px;
+}
+
+.organik-fitur-cek-konversi-sampah{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    padding-left: 47.5px;
+    padding-top: 26px;
+    margin-bottom: 11.5px;
+
+}
+
+.garis-pembatas-konversi-sampah{
+    width: 309px;
+    height: 1px;
+    background-color: #FFB547;
+    margin-bottom: 14.5px;
+    margin-top: 11.5px;
+
+    
+}
+
+.anorganik-fitur-cek-konversi-sampah{
+
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 13px;
+    padding-left: 47.5px;
+    padding-top: 0px;
+}
+
+.input-cek-konversi-sampah{
+    margin: 0px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-color: #FFB547;
+    width: 267px;
+    height: 40px; 
+
+
+    margin-top: 2px;
+    margin-bottom: 17px;
+}
+
+.judul-input-cek-konversi-sampah{
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #A0A0A0;
+
+    margin-left: 5px;
+    margin-bottom: 8px;
+    
+}
+
+.total-poin-cek-konversi-sampah-container{
+    position: absolute;
+    bottom: 0px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100vw;
+
+    background-color: #FFB547;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.judul-total-poin-cek-konversi-sampah-container{
+    margin-left: 24px;
+    color: white;
+}
+
+.judul-poin-cek-konversi-sampah-container{
+    margin-right: 16px;
+    color: white;
+}
