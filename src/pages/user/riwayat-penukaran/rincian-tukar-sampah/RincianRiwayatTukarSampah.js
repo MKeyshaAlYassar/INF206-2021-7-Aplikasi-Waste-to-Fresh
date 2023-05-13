@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./RincianRiwayatTukarSampah.css";
 import { db } from "../../../../firebase";
+import { TiThMenuOutline } from "react-icons/ti";
+import MenuUbahHapusPenukaran from "../../../components/MenuUbahHapusPenukaran/MenuUbahHapusPenukaran";
 
 export default function RincianRiwayatTukarSampah() {
   const params = useParams();
@@ -10,6 +12,12 @@ export default function RincianRiwayatTukarSampah() {
   console.log(params.id);
 
   const [dataRincian, setDataRincian] = useState({});
+
+  // State untuk buka menu ubah / hapus
+  const [openMenu, setOpenMenu] = useState(false);
+
+  // State untuk buka pop up konfirmasi hapus
+  const [openKonfirmasiHapus, setOpenKonfirmasiHapus] = useState(false);
 
   useEffect(() => {
     const ambilDataRincian = async () => {
@@ -35,6 +43,10 @@ export default function RincianRiwayatTukarSampah() {
       <Link className="tombol-kembali" to="/riwayat-user">
         &lt;
       </Link>
+      <TiThMenuOutline
+        className="penukaran-menu-icon"
+        onClick={() => setOpenMenu(true)}
+      />
       <div className="header-rincian-tukar-sampah">
         <p className="judul-fitur">Rincian Penukaran Sampah</p>
         <p className="deskripsi-fitur">Lihat detail penukaran Anda</p>
@@ -83,6 +95,13 @@ export default function RincianRiwayatTukarSampah() {
         <p className="judul-foto-sampah">Foto Sampah</p>
         <img className="foto-sampah" src={dataRincian.urlFotoSampah} />
       </div>
+
+      <MenuUbahHapusPenukaran
+        open={openMenu}
+        onClose={() => setOpenMenu(false)}
+        linkUbah="/belum-ada"
+        setOpenKonfirmasiHapus={setOpenKonfirmasiHapus}
+      />
     </div>
   );
 }

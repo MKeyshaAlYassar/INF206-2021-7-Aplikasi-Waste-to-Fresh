@@ -25,7 +25,12 @@ import RincianRiwayatTukarSampah from "./pages/user/riwayat-penukaran/rincian-tu
 import BahanMakanan from "./pages/petugas/bahan-makanan/BahanMakanan";
 import RincianNotifikasiTukarSampah from "./pages/petugas/beranda-petugas/components/DaftarNotifikasiPenukaran/RincianNotifikasiTukarSampah/RincianNotifikasiTukarSampah";
 import RincianNotifikasiTukarPoin from "./pages/petugas/beranda-petugas/components/DaftarNotifikasiPenukaran/RincianNotifikasiTukarPoin/RincianNotifikasiTukarPoin";
+import PenukaranPetugas from "./pages/petugas/penukaran-petugas/PenukaranPetugas";
+import RincianPenukaranSampahPetugas from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/RincianPenukaranSampahPetugas";
+import RincianPenukaranPoinPetugas from "./pages/petugas/penukaran-petugas/RincianPenukaranPoinPetugas/RincianPenukaranPoinPetugas";
+import BeriPoinPenukaranSampah from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/beri-poin/BeriPoinPenukaranSampah";
 import Bantuan from "./pages/user/bantuan/Bantuan";
+
 
 function App() {
   return (
@@ -77,10 +82,7 @@ function App() {
             <Route element={<NavbarPetugas />}>
               <Route path="/beranda-petugas" element={<BerandaPetugas />} />
 
-              <Route
-                path="/penukaran-petugas"
-                element={<h1>Halaman Penukaran Petugas</h1>}
-              />
+              <Route path="/penukaran-petugas" element={<PenukaranPetugas />} />
               <Route path="/bahan-makanan" element={<BahanMakanan />} />
             </Route>
 
@@ -92,6 +94,21 @@ function App() {
             <Route
               path="/rincian-notifikasi-penukaran/tukar-poin/:id"
               element={<RincianNotifikasiTukarPoin />}
+            />
+
+            <Route
+              path="/rincian-penukaran-petugas/tukar-sampah/:id"
+              element={<RincianPenukaranSampahPetugas />}
+            />
+
+            <Route
+              path="/rincian-penukaran-petugas/tukar-poin/:id/beri-poin"
+              element={<BeriPoinPenukaranSampah />}
+            />
+
+            <Route
+              path="/rincian-penukaran-petugas/tukar-poin/:id"
+              element={<RincianPenukaranPoinPetugas />}
             />
           </Route>
         </Routes>

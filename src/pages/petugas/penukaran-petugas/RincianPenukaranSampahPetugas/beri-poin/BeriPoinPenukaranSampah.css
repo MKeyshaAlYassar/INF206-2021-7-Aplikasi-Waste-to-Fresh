@@ -1,0 +1,175 @@
+.beri-poin-penukaran-sampah-container{
+  background-color: #FFB547;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-beri-poin-penukaran-sampah{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.judul-fitur-beri-poin-penukaran-sampah{
+  margin: 0px;
+  text-align: center;
+  margin-top: 27px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  
+}
+
+.deskripsi-fitur-beri-poin-penukaran-sampah{
+  margin: 0;
+  width: 215px;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  margin-top: 6px;
+}
+
+.fitur-beri-poin-penukaran-sampah-container{
+  background-color: white;
+  border-radius: 39px 39px 0px 0px;
+  position: absolute;
+  bottom: 0px;
+  top: 90px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.fitur-beri-poin-penukaran-sampah-container > p {
+  margin: 0px;
+  width: inherit;
+  text-align: left;
+  padding-left: 47.5px;
+}
+
+.organik-fitur-beri-poin-penukaran-sampah{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  padding-left: 47.5px;
+  padding-top: 26px;
+  margin-bottom: 11.5px;
+
+}
+
+.garis-pembatas-beri-poin-penukaran-sampah{
+  width: 309px;
+  height: 1px;
+  background-color: #FFB547;
+  margin-bottom: 14.5px;
+  margin-top: 11.5px;
+
+  
+}
+
+.anorganik-fitur-beri-poin-penukaran-sampah{
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 13px;
+  padding-left: 47.5px;
+  padding-top: 0px;
+}
+
+.input-beri-poin-penukaran-sampah{
+  margin: 0px;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border-color: #FFB547;
+  width: 267px;
+  height: 40px; 
+
+
+  margin-top: 2px;
+  margin-bottom: 17px;
+}
+
+.judul-input-beri-poin-penukaran-sampah{
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #A0A0A0;
+
+  margin-left: 5px;
+  margin-bottom: 5px;
+
+  padding-left: 65px;
+  
+}
+
+.total-poin-beri-poin-penukaran-sampah-container{
+  position: absolute;
+  bottom: 18px;
+  height: 48px;
+  width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #FFB547;
+  border-radius: 30px;
+}
+
+.total-poin-container {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 23px;
+
+  align-items: center;
+}
+
+.total-poin-container > p {
+  color: white;
+}
+
+.garis-pembatas-total-poin {
+  width: 2px;
+  height: 25px;
+
+  background-color: white;
+  border-radius: 1px;
+
+  margin-left: 12px;
+  margin-right: 15px;
+}
+
+.poin-beri-poin-penukaran-sampah {
+  text-align: left;
+}
+
+.tombol-konfirmasi-beri-poin {
+  width: 100px;
+  height: 35px;
+
+  border-style: solid;
+  border-color: white;
+
+  border-radius: 20px;
+
+  color: white;
+  background-color: #FFB547;
+
+  margin-right: 10px;
+}
