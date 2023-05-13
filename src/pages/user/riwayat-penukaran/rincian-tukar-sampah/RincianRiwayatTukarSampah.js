@@ -99,7 +99,7 @@ export default function RincianRiwayatTukarSampah() {
       <MenuUbahHapusPenukaran
         open={openMenu}
         onClose={() => setOpenMenu(false)}
-        linkUbah="/belum-ada"
+        linkUbah={`/riwayat-user/tukar-sampah/${idTukarSampah}/ubah`}
         setOpenKonfirmasiHapus={setOpenKonfirmasiHapus}
       />
     </div>
