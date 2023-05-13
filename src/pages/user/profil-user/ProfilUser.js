@@ -62,12 +62,13 @@ export default function ProfilUser() {
           <p className="nama-user">Nama User : {dataUserLogin.nama}</p>
         
           <p className="nomor-telepon-user">Nomor Telepon :{dataUserLogin.noHP}</p>
+          <p className="email-user">Email : {dataUserLogin.email} </p>
          
         
 
 
         </div>
-        <button className="tombol-ubah-kata-sandi">Ubah Kata Sandi</button>
+        
         <button className="tombol-keluar-akun" onClick={handleLogout}>Keluar Akun</button>
       </div>
     </div>

@@ -74,19 +74,6 @@
     
 }
 
-.tombol-ubah-kata-sandi {
-    border-radius: 15px;
-    color: rgb(255, 255, 255);
-    background-color: #60BA62;
-    border: none;
-    width: 306px;
-    height: 45px;
-    font-size: 13px;
-    font-weight: 500;
-
-    
-}
-
 .halo-pengguna{
     
     font-size: 13px;
@@ -118,4 +105,11 @@ color: white;
 margin-left: 15px;
 font-weight: 500;
 
+}
+
+.email-user{
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-weight: 500;
 }

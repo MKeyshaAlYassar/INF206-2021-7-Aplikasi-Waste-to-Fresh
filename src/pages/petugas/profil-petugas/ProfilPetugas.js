@@ -63,13 +63,13 @@ export default function ProfilPetugas() {
           <p className="nama-petugas">Nama Petugas   : {dataPetugasLogin.nama}</p>
         
           <p className="nomor-telepon-petugas">Nomor Telepon : {dataPetugasLogin.noHP}</p>
+          <p className="email-petugas">Email : {dataPetugasLogin.email} </p>
          
         
 
 
         </div>
         
-        <button className="tombol-ubah-kata-sandi-petugas">Ubah Kata Sandi</button>
         <button className="tombol-keluar-akun-petugas" onClick={handleLogout}>Keluar Akun</button>
       </div>
     </div>
