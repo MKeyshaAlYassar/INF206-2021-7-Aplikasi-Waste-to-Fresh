@@ -5,6 +5,7 @@ import "./RincianRiwayatTukarSampah.css";
 import { db } from "../../../../firebase";
 import { TiThMenuOutline } from "react-icons/ti";
 import MenuUbahHapusPenukaran from "../../../components/MenuUbahHapusPenukaran/MenuUbahHapusPenukaran";
+import HapusTukarSampah from "../../hapus-tukar-sampah/HapusTukarSampah";
 
 export default function RincianRiwayatTukarSampah() {
   const params = useParams();
@@ -95,13 +96,19 @@ export default function RincianRiwayatTukarSampah() {
         <p className="judul-foto-sampah">Foto Sampah</p>
         <img className="foto-sampah" src={dataRincian.urlFotoSampah} />
       </div>
-
       <MenuUbahHapusPenukaran
         open={openMenu}
         onClose={() => setOpenMenu(false)}
         linkUbah={`/riwayat-user/tukar-sampah/${idTukarSampah}/ubah`}
-        setOpenKonfirmasiHapus={setOpenKonfirmasiHapus}
+        setOpenKonfirmasiHapus={() => setOpenKonfirmasiHapus(true)}
       />
+      <HapusTukarSampah
+        open={openKonfirmasiHapus}
+        onClose={() => {
+          setOpenKonfirmasiHapus(false);
+        }}
+      />
+      ;
     </div>
   );
 }

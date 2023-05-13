@@ -25,7 +25,7 @@ const MenuUbahHapusPenukaran = ({
         </div>
         <div
           className="pilihan-hapus-penukaran-container"
-          onClick={setOpenKonfirmasiHapus(true)}>
+          onClick={setOpenKonfirmasiHapus}>
           <MdOutlineClose className="icon-hapus-penukaran" />
           <p>Hapus Penukaran</p>
         </div>
