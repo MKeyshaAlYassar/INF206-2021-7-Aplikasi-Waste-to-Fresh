@@ -1,0 +1,115 @@
+.judul-bantuan{
+    background-color: #60BA62;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-bantuan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.judul-header-bantuan{
+    margin: 0px;
+    text-align: center;
+    margin-top: 27px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+
+}
+
+.isi-bantuan-container{
+    position: absolute;
+  top: 70px;
+  bottom: 0px;
+
+  width: 100vw;
+
+  background-color: #F9F9F9;
+
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+}
+
+.judul-pengenalan{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 17 px;
+    line-height: 23px;
+    margin-bottom: 11.5px;
+    margin-top: 35px ;
+    padding-left: 25px;
+
+}
+
+.isi-pengenalan{
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+    
+}
+
+.judul-fitur-tukar-sampah{
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+.isi-fitur-tukar-sampah{
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+}
+
+.judul-fitur-tukar-poin{
+    font-weight: 500;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.isi-fitur-tukar-poin{
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+}
+
+.judul-fitur-cek-konversi{
+    font-weight: 500;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.isi-fitur-cek-konversi{
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+}
+
+.hubungi-kami{
+    margin-top: 40px;
+}
+
+.judul-hubungi-kami{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 11.5px;
+    align-items: center;
+}
+
+.isi-hubungi-kami{
+    font-size: 15px;
+    text-align: center;
+
+}
