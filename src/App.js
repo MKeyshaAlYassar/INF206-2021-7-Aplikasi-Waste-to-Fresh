@@ -29,6 +29,8 @@ import PenukaranPetugas from "./pages/petugas/penukaran-petugas/PenukaranPetugas
 import RincianPenukaranSampahPetugas from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/RincianPenukaranSampahPetugas";
 import RincianPenukaranPoinPetugas from "./pages/petugas/penukaran-petugas/RincianPenukaranPoinPetugas/RincianPenukaranPoinPetugas";
 import BeriPoinPenukaranSampah from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/beri-poin/BeriPoinPenukaranSampah";
+import Bantuan from "./pages/user/bantuan/Bantuan";
+
 
 function App() {
   return (
@@ -51,7 +53,7 @@ function App() {
                 element={<DaftarRiwayatPenukaran />}
               />
 
-              <Route path="/bantuan-user" element={<h1>Halaman Bantuan</h1>} />
+              <Route path="/bantuan-user" element={< Bantuan />} />
             </Route>
 
             <Route
