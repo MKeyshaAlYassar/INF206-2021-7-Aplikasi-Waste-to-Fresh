@@ -30,6 +30,7 @@ import RincianPenukaranSampahPetugas from "./pages/petugas/penukaran-petugas/Rin
 import RincianPenukaranPoinPetugas from "./pages/petugas/penukaran-petugas/RincianPenukaranPoinPetugas/RincianPenukaranPoinPetugas";
 import BeriPoinPenukaranSampah from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/beri-poin/BeriPoinPenukaranSampah";
 import Bantuan from "./pages/user/bantuan/Bantuan";
+import UbahTukarSampah from "./pages/user/ubah-tukar-sampah/UbahTukarSampah";
 
 
 function App() {
@@ -63,6 +64,11 @@ function App() {
             <Route
               path="/riwayat-user/tukar-poin/:id"
               element={<RincianRiwayatTukarPoin />}
+            />
+
+            <Route
+              path="/riwayat-user/tukar-sampah/:id/ubah"
+              element={<UbahTukarSampah />}
             />
 
             <Route path="/tukar-sampah" element={<TukarSampah />} />
