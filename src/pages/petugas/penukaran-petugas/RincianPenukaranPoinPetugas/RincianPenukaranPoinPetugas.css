@@ -1,8 +1,6 @@
-.rincian-tukar-poin-container {
+.rincian-penukaran-poin-petugas-container {
   width: 100vw;
   height: 100vh;
-
-  background-color: #60BA62;
 }
 
 .tombol-kembali {
@@ -16,23 +14,13 @@
   margin: 0px;
 }
 
-.penukaran-menu-icon {
-  color: white;
-
-  position: absolute;
-  right: 23px;
-  top: 27px;
-
-  font-size: 21px;
-}
-
-.header-rincian-tukar-poin {
+.header-rincian-penukaran-poin-petugas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-rincian-tukar-poin > p {
+.header-rincian-penukaran-poin-petugas > p {
   color: white;
 }
 
@@ -50,12 +38,12 @@
   margin-top: 8px;
 }
 
-.fitur-rincian-tukar-poin-container {
+.fitur-rincian-penukaran-poin-petugas-container {
   position: absolute;
   top: 90px;
   bottom: 0px;
 
-  padding-top: 30px;
+  padding-top: 27px;
 
   width: 100vw;
 
@@ -72,24 +60,23 @@
   overflow-x: hidden;
 }
 
-.informasi-penukaran-poin {
+.informasi-penukaran-poin-petugas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25px auto auto auto auto auto;
+  grid-template-rows: 25px auto auto auto;
   gap: 8px;
 
   width: 314px;
   padding: 20px 0px;
 
   color: white;
-  background-color: #60BA62;
 
   border-radius: 30px;
 
   margin-bottom: 16px;
 }
 
-.informasi-data-penukar {
+.informasi-penukaran-poin-petugas-penukar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 25px auto auto auto auto;
@@ -99,7 +86,6 @@
   padding: 20px 0px;
 
   color: white;
-  background-color: #60BA62;
 
   border-radius: 30px;
 
@@ -154,13 +140,47 @@
   font-weight: 300;
 }
 
-.inside-shadow-tukar-poin {
+.rincian-penukaran-petugas-struk-bahan-makan-dipilih {
+  margin-bottom: 36px;
+  width: 314px;
+
+  border-radius: 31px;
+
+  padding: 20px 0px;
+
+  margin-bottom: 90px;
+}
+
+.tombol-selesaikan-penukaran-poin-petugas {
+  position: fixed;
+  bottom: 25px;
+
+  width: 150px;
+  height: 40px;
+
+  border: none;
+  border-radius: 20px;
+
+  color: white;
+  background-color: #60BA62;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.1));
+
+  z-index: 999;
+}
+
+.inside-shadow-rincian-notifikasi-tukar-poin {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+
+  margin-bottom: -8px;
   
   height: 60px;
 
-  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #DDDDDD 100%);
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #ededed 100%);
 }

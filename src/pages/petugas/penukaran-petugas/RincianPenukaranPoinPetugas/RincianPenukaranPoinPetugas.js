@@ -1,30 +1,37 @@
-import "./RincianNotifikasiTukarPoin.css";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import "./RincianPenukaranPoinPetugas.css";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   getDoc,
   doc,
   collection,
   getDocs,
-  query,
-  where,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../../../../../../firebase";
-import { UserAuth } from "../../../../../../context/AuthContext";
-import PopUpBerhasil from "../../../../../components/popup/PopUpBerhasil";
+import { db } from "../../../../firebase";
+import PopUpBerhasil from "../../../components/popup/PopUpBerhasil";
+import { useNavigate } from "react-router-dom";
 
-export default function RincianNotifikasiTukarPoin() {
+export default function RincianPenukaranPoinPetugas() {
   const params = useParams();
   const idTukarPoin = params.id;
-  console.log(params.id);
 
   const [dataRincian, setDataRincian] = useState({});
 
-  const [dataPetugasLogin, setDataPetugasLogin] = useState([]);
+  //State untuk pop up berhasil selesaikan
+  const [openPopUp, setOpenPopUp] = useState(false);
 
   const navigate = useNavigate();
-  const [openPopUp, setOpenPopUp] = useState(false);
+
+  // Buat style untuk kondisi diproses dan selesai
+  // Set style condition
+  let divStyle = {};
+
+  if (dataRincian?.status === "Diproses") {
+    divStyle = { backgroundColor: "#FFB547" };
+  } else if (dataRincian?.status === "Selesai") {
+    divStyle = { backgroundColor: "#60BA62" };
+  }
 
   useEffect(() => {
     const ambilDataRincian = async () => {
@@ -108,62 +115,28 @@ export default function RincianNotifikasiTukarPoin() {
     }
   });
 
-  // Supaya bisa akses data akun user, seperti email dan UID
-  const { user } = UserAuth();
-
-  // Ambil data user menurut uid nya
-  // Simpan di state
-
-  const petugasCollectionRef = collection(db, "petugas");
-
-  const uid = user.uid;
-
-  useEffect(() => {
-    const ambilPetugasLogin = async () => {
-      try {
-        const querySnapshot = await getDocs(
-          query(petugasCollectionRef, where("uid", "==", uid))
-        );
-        const data = querySnapshot.docs[0].data();
-        setDataPetugasLogin(data);
-      } catch (error) {
-        console.log("Error getting documents: ", error);
-      }
-    };
-
-    if (uid) {
-      ambilPetugasLogin();
-    }
-  }, [uid]);
-
-  async function handleTerima() {
+  async function handleSelesaikan() {
     // Reference the document to be updated
     const tukarpoinRef = doc(collection(db, "tukarpoin"), idTukarPoin);
 
-    // Update the document with multiple fields
-    await updateDoc(tukarpoinRef, {
-      status: "Diproses",
-      uidPetugasPemroses: dataPetugasLogin.uid,
-      namaPetugasPemroses: dataPetugasLogin.nama,
-      noHpPetugasPemroses: dataPetugasLogin.noHP,
-    });
-
+    // Update the status field to "Selesai"
+    await updateDoc(tukarpoinRef, { status: "Selesai" });
     setOpenPopUp(true);
   }
 
   return (
-    <div className="rincian-notifikasi-tukar-poin-container">
-      <Link className="tombol-kembali" to="/beranda-petugas">
+    <div className="rincian-penukaran-poin-petugas-container" style={divStyle}>
+      <Link className="tombol-kembali" to="/penukaran-petugas">
         &lt;
       </Link>
-      <div className="header-rincian-notifikasi-tukar-poin">
+      <div className="header-rincian-penukaran-poin-petugas">
         <p className="judul-fitur"> Rincian Notifikasi Tukar Poin</p>
         <p className="deskripsi-fitur">
           Terima permintaan penukaran dari masyarakat
         </p>
       </div>
-      <div className="fitur-rincian-notifikasi-tukar-poin-container">
-        <div className="informasi-notifikasi-penukaran-poin">
+      <div className="fitur-rincian-penukaran-poin-petugas-container">
+        <div className="informasi-penukaran-poin-petugas" style={divStyle}>
           <p className="judul-informasi">Informasi Penukaran</p>
           <p className="informasi-subject">Status</p>
           <p className="informasi-isi">{dataRincian.status}</p>
@@ -175,7 +148,9 @@ export default function RincianNotifikasiTukarPoin() {
           <p className="informasi-isi">{jam} WIB</p>
         </div>
 
-        <div className="informasi-notifikasi-data-penukar">
+        <div
+          className="informasi-penukaran-poin-petugas-penukar"
+          style={divStyle}>
           <p className="judul-informasi">Data Penukaran</p>
           <p className="informasi-subject">Nama</p>
           <p className="informasi-isi">{dataRincian.namaPenukar}</p>
@@ -187,7 +162,9 @@ export default function RincianNotifikasiTukarPoin() {
           <p className="informasi-isi-alamat">{dataRincian.alamatAntar}</p>
         </div>
 
-        <div className="rincian-struk-bahan-makan-dipilih">
+        <div
+          className="rincian-penukaran-petugas-struk-bahan-makan-dipilih"
+          style={divStyle}>
           <p className="struk-judul">Bahan Makanan Yang Dipilih</p>
           <div className="tabel-struk">
             <p className="judul-tabel">Item</p>
@@ -200,11 +177,13 @@ export default function RincianNotifikasiTukarPoin() {
           </div>
         </div>
 
-        <button
-          className="tombol-terima-notifikasi-tukar-poin"
-          onClick={handleTerima}>
-          Terima
-        </button>
+        {dataRincian?.status === "Diproses" && (
+          <button
+            className="tombol-selesaikan-penukaran-poin-petugas"
+            onClick={handleSelesaikan}>
+            Selesaikan
+          </button>
+        )}
       </div>
 
       <div className="top-scroll-cover" />
@@ -214,11 +193,11 @@ export default function RincianNotifikasiTukarPoin() {
         open={openPopUp}
         onClose={() => {
           setOpenPopUp(false);
-          navigate(`/rincian-penukaran-petugas/tukar-poin/${idTukarPoin}`);
+          navigate("/beranda-petugas");
         }}
         title="Berhasil"
-        subtitle="Penukaran poin berhasil diterima"
-        tombol="Proses Penukaran"
+        subtitle="Penukaran poin berhasil diselesaikan"
+        tombol="Kembali Ke Beranda"
       />
     </div>
   );

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./RincianRiwayatTukarPoin.css";
 import { db } from "../../../../firebase";
+import { TiThMenuOutline } from "react-icons/ti";
+import MenuUbahHapusPenukaran from "../../../components/MenuUbahHapusPenukaran/MenuUbahHapusPenukaran";
 
 export default function RincianRiwayatTukarPoin() {
   const params = useParams();
@@ -10,6 +12,12 @@ export default function RincianRiwayatTukarPoin() {
   console.log(params.id);
 
   const [dataRincian, setDataRincian] = useState({});
+
+  // State untuk buka menu ubah / hapus
+  const [openMenu, setOpenMenu] = useState(false);
+
+  // State untuk buka pop up konfirmasi hapus
+  const [openKonfirmasiHapus, setOpenKonfirmasiHapus] = useState(false);
 
   // Ambil data tukar poin
   useEffect(() => {
@@ -95,6 +103,10 @@ export default function RincianRiwayatTukarPoin() {
       <Link className="tombol-kembali" to="/riwayat-user">
         &lt;
       </Link>
+      <TiThMenuOutline
+        className="penukaran-menu-icon"
+        onClick={() => setOpenMenu(true)}
+      />
       <div className="header-rincian-tukar-poin">
         <p className="judul-fitur">Rincian Penukaran Poin</p>
         <p className="deskripsi-fitur">Lihat detail penukaran Anda</p>
@@ -156,6 +168,13 @@ export default function RincianRiwayatTukarPoin() {
 
       <div className="top-scroll-cover" />
       <div className="inside-shadow-tukar-poin"></div>
+
+      <MenuUbahHapusPenukaran
+        open={openMenu}
+        onClose={() => setOpenMenu(false)}
+        linkUbah="/belum-ada"
+        setOpenKonfirmasiHapus={setOpenKonfirmasiHapus}
+      />
     </div>
   );
 }

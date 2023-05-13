@@ -1,8 +1,6 @@
-.rincian-tukar-poin-container {
+.rincian-penukaran-sampah-petugas-container {
   width: 100vw;
   height: 100vh;
-
-  background-color: #60BA62;
 }
 
 .tombol-kembali {
@@ -16,23 +14,13 @@
   margin: 0px;
 }
 
-.penukaran-menu-icon {
-  color: white;
-
-  position: absolute;
-  right: 23px;
-  top: 27px;
-
-  font-size: 21px;
-}
-
-.header-rincian-tukar-poin {
+.header-rincian-penukaran-sampah-petugas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-rincian-tukar-poin > p {
+.header-rincian-penukaran-sampah-petugas > p {
   color: white;
 }
 
@@ -50,12 +38,12 @@
   margin-top: 8px;
 }
 
-.fitur-rincian-tukar-poin-container {
+.fitur-rincian-penukaran-sampah-petugas-container {
   position: absolute;
   top: 90px;
   bottom: 0px;
 
-  padding-top: 30px;
+  padding-top: 23px;
 
   width: 100vw;
 
@@ -72,24 +60,23 @@
   overflow-x: hidden;
 }
 
-.informasi-penukaran-poin {
+.informasi-penukaran-sampah-petugas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25px auto auto auto auto auto;
+  grid-template-rows: 25px auto auto auto;
   gap: 8px;
 
   width: 314px;
   padding: 20px 0px;
 
   color: white;
-  background-color: #60BA62;
 
   border-radius: 30px;
 
   margin-bottom: 16px;
 }
 
-.informasi-data-penukar {
+.informasi-data-penukaran-sampah-petugas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 25px auto auto auto auto;
@@ -99,11 +86,11 @@
   padding: 20px 0px;
 
   color: white;
-  background-color: #60BA62;
+
 
   border-radius: 30px;
 
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 
 .judul-informasi {
@@ -154,13 +141,38 @@
   font-weight: 300;
 }
 
-.inside-shadow-tukar-poin {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.judul-foto-sampah {
+  align-self: start;
   
-  height: 60px;
+  margin-left: 45px;
 
-  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #DDDDDD 100%);
+  font-size: 15px;
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.foto-sampah {
+  width: 305px; /* set the width of the cropped image */
+  height: 150px; /* set the height of the cropped image */
+  object-fit: cover; /* crop the image to cover the entire container */
+  object-position: center; /* crop the image from the center */
+  border-radius: 28px;
+}
+
+.tombol-beri-poin-penukaran-sampah-petugas {
+  position: fixed;
+  bottom: 40px;
+
+  width: 150px;
+  height: 40px;
+
+  border: none;
+  border-radius: 20px;
+
+  color: white;
+  background-color: #60BA62;
+
+  font-size: 14px;
+  font-weight: 500;
 }

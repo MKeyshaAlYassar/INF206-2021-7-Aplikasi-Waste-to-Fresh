@@ -1,0 +1,83 @@
+.scrollable-penukaran-petugas {
+  padding-top: 20px;
+  padding-bottom: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 13px;
+  align-items: center;
+  justify-items: center;
+
+  overflow-y: auto;
+  width: 100vw;
+}
+
+.display-penukaran-petugas-container {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+
+  width: 300px;
+  height: 75px;
+
+  border-radius: 25px;
+
+  background-color: #60BA62;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.display-penukaran-petugas-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.belum-ada-penukaran {
+  position: absolute;
+  top: 90px;
+
+  color: #A0A0A0;
+
+  z-index: 9999;
+}
+
+.nama-tanggal-display-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.nama-display-penukaran-petugas {
+  margin: 0px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  margin-left: 18px;
+
+  color: white;
+}
+
+.tanggal-display-penukaran-petugas {
+  margin: 0px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  margin-right: 18px;
+
+  color: white;
+}
+
+.alamat-display-penukaran-petugas {
+  margin: 0px;
+  margin-left: 18px;
+
+  font-size: 13px;
+  
+
+  color: white;
+}

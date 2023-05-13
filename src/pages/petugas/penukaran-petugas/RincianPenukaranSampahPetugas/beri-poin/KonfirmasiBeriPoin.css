@@ -1,0 +1,185 @@
+.konfirmasi-beri-poin-overlay {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  z-index: 99999;
+}
+
+.konfirmasi-beri-poin-container {
+  position: fixed;
+  bottom: 0px;
+
+  width: 100vw;
+  height: 475px;
+
+  background-color: white;
+  border-radius: 40px 40px 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tutup-konfirmasi-beri-poin {
+  position: fixed;
+  right: 27px;
+  bottom: 430px;
+
+  color: #FFB547;
+  font-size: 23px;
+}
+
+.judul-konfirmasi-beri-poin {
+  font-size: 17px;
+  font-weight: 500;
+
+  margin-top: 23px;
+}
+
+.nama-rincian-sampah-ditukar {
+  margin: 0px;
+
+  width: 330px;
+  margin-left: 30px;
+
+  font-size: 15px;
+
+  margin-bottom: 15px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.tabel-rincian-sampah-ditukar {
+  display: grid;
+  grid-template-columns: repeat(4); 
+  grid-template-rows: repeat(10);
+  gap: 5px;
+
+  background-color: #FFB547;
+  border-radius: 20px;
+}
+
+.tabel-rincian-sampah-ditukar > p {
+  color: white;
+}
+
+.judul-tabel-rincian-sampah-ditukar {
+  margin: 0px;
+  grid-column: 1 / span 4;
+  font-weight: 500;
+  font-size: 17px;
+
+  margin: 12px 10px 0px 18px;
+}
+
+.judul-jenis-kolom-tabel-rincian-sampah-ditukar {
+  margin: 0px;
+
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 18px;
+}
+
+.judul-jumlah-poin-tabel-rincian-sampah-ditukar {
+  margin: 0px;
+
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 18px;
+}
+
+.judul-kolom-tabel-rincian-sampah-ditukar {
+  margin: 0px;
+
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+
+  margin: 0px 0px 6px 6px;
+}
+
+.isi-kolom-jenis {
+  margin: 0px;
+  font-size: 13px;
+
+  margin-left: 18px;
+
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.isi-kolom-poin-kg {
+  margin: 0px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.isi-kolom-jumlah-kg {
+  margin: 0px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.isi-kolom-jumlah-poin {
+  margin: 0px;
+  text-align: center;
+  font-size: 13px;
+
+  margin-right: 18px;
+}
+
+.garis-pembatas-tabel-sampah-ditukar {
+  grid-column: 1 / span 4;
+
+  background-color: white;
+  height: 2px;
+  width: 290px;
+
+  align-self: center;
+  justify-self: center;
+
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.judul-total-poin-tabel-sampah-ditukar {
+  margin: 0px;
+  grid-column: 1 / span 3;
+
+  font-size: 13px;
+  margin-left: 18px;
+
+  margin-bottom: 17px;
+}
+
+.total-poin-tabel-sampah-ditukar {
+  margin: 0px;
+  font-size: 13px;
+  text-align: center;
+  margin-right: 18px;
+  margin-bottom: 17px;
+}
+
+.tombol-kirim-poin {
+  position: fixed;
+
+  bottom: 25px;
+
+  width: 150px;
+  height: 40px;
+
+  border-radius: 20px;
+  border-style: none;
+
+  color: white;
+  background-color: #FFB547;
+
+  font-size: 15px;
+  font-weight: 500;
+}
