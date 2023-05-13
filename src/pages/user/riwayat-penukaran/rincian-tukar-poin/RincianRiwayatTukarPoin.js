@@ -5,6 +5,7 @@ import "./RincianRiwayatTukarPoin.css";
 import { db } from "../../../../firebase";
 import { TiThMenuOutline } from "react-icons/ti";
 import MenuUbahHapusPenukaran from "../../../components/MenuUbahHapusPenukaran/MenuUbahHapusPenukaran";
+import HapusTukarPoin from "../../hapus-tukar-poin/HapusTukarPoin";
 
 export default function RincianRiwayatTukarPoin() {
   const params = useParams();
@@ -173,7 +174,14 @@ export default function RincianRiwayatTukarPoin() {
         open={openMenu}
         onClose={() => setOpenMenu(false)}
         linkUbah="/belum-ada"
-        setOpenKonfirmasiHapus={setOpenKonfirmasiHapus}
+        setOpenKonfirmasiHapus={() => setOpenKonfirmasiHapus(true)}
+      />
+
+      <HapusTukarPoin
+        open={openKonfirmasiHapus}
+        onClose={() => {
+          setOpenKonfirmasiHapus(false);
+        }}
       />
     </div>
   );
