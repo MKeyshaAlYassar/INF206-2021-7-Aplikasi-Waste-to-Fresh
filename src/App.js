@@ -31,7 +31,8 @@ import RincianPenukaranPoinPetugas from "./pages/petugas/penukaran-petugas/Rinci
 import BeriPoinPenukaranSampah from "./pages/petugas/penukaran-petugas/RincianPenukaranSampahPetugas/beri-poin/BeriPoinPenukaranSampah";
 import Bantuan from "./pages/user/bantuan/Bantuan";
 import UbahTukarSampah from "./pages/user/ubah-tukar-sampah/UbahTukarSampah";
-
+import UbahTukarPoin from "./pages/user/ubah-tukar-poin/UbahTukarPoin";
+import StrukUbahTukarPoin from "./pages/user/ubah-tukar-poin/StrukUbahTukarPoin";
 
 function App() {
   return (
@@ -54,7 +55,7 @@ function App() {
                 element={<DaftarRiwayatPenukaran />}
               />
 
-              <Route path="/bantuan-user" element={< Bantuan />} />
+              <Route path="/bantuan-user" element={<Bantuan />} />
             </Route>
 
             <Route
@@ -69,6 +70,15 @@ function App() {
             <Route
               path="/riwayat-user/tukar-sampah/:id/ubah"
               element={<UbahTukarSampah />}
+            />
+
+            <Route
+              path="/riwayat-user/tukar-poin/:id/ubah"
+              element={<UbahTukarPoin />}
+            />
+            <Route
+              path="/riwayat-user/tukar-poin/:id/ubah-struk"
+              element={<StrukUbahTukarPoin />}
             />
 
             <Route path="/tukar-sampah" element={<TukarSampah />} />

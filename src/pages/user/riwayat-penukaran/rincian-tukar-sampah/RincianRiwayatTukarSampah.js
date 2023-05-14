@@ -101,14 +101,15 @@ export default function RincianRiwayatTukarSampah() {
         onClose={() => setOpenMenu(false)}
         linkUbah={`/riwayat-user/tukar-sampah/${idTukarSampah}/ubah`}
         setOpenKonfirmasiHapus={() => setOpenKonfirmasiHapus(true)}
+        status={dataRincian.status}
       />
       <HapusTukarSampah
         open={openKonfirmasiHapus}
         onClose={() => {
           setOpenKonfirmasiHapus(false);
         }}
+        idTukarSampah={idTukarSampah}
       />
-      ;
     </div>
   );
 }

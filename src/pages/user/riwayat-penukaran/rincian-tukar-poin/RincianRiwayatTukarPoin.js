@@ -173,8 +173,9 @@ export default function RincianRiwayatTukarPoin() {
       <MenuUbahHapusPenukaran
         open={openMenu}
         onClose={() => setOpenMenu(false)}
-        linkUbah="/belum-ada"
+        linkUbah={`/riwayat-user/tukar-poin/${idTukarPoin}/ubah`}
         setOpenKonfirmasiHapus={() => setOpenKonfirmasiHapus(true)}
+        status={dataRincian.status}
       />
 
       <HapusTukarPoin
@@ -182,6 +183,8 @@ export default function RincianRiwayatTukarPoin() {
         onClose={() => {
           setOpenKonfirmasiHapus(false);
         }}
+        idTukarPoin={idTukarPoin}
+        dataTukarPoin={dataRincian}
       />
     </div>
   );
